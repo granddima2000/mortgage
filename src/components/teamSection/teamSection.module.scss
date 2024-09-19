@@ -1,0 +1,123 @@
+@import '../../style/variables.scss';
+
+.teamSection {
+	margin-top: 104px;
+	.container {
+		max-width: 1140px;
+		margin: 0 auto;
+		padding: 0;
+		.title {
+			font-weight: 700;
+			font-size: 36px;
+			text-align: center;
+			color: $indigo-color;
+		}
+		.subtitle {
+			font-weight: 400;
+			font-size: 18px;
+			text-align: center;
+			opacity: 0.5;
+		}
+		.managerCards {
+			display: flex;
+			// flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			padding: 32px;
+			.managerCard {
+				margin-top: 65px;
+				display: flex;
+				flex-direction: column;
+				width: 512px;	
+			}
+			.managerWrapper {
+				position: relative;
+				display: flex;
+				align-items: center;
+				.photo {
+
+				}
+				.btnWrapper {
+					position: absolute;
+					right: 60px;
+					display: flex;
+					align-items: center;
+					.pulseText {
+						font-weight: 400;
+						font-size: 13px;
+					}
+				}
+			}
+			.managerTitle {
+				margin-top: 28px;
+				font-weight: 700;
+				font-size: 11px;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: $ocean-color
+			}
+			.managerName {
+				margin-top: 5px;
+				font-weight: 700;
+				font-size: 28px;
+				line-height: 100%;
+				color: $indigo-color;
+			}
+			.divider {
+				margin-top: 20px;
+				display: block;
+				height: 1px;
+				width: 40px;
+				background-color: #979797;
+			}
+			.managerDescr {
+				margin-top: 17px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 171%;
+				opacity: 0.5;
+			}
+			.skillsName {
+				margin-top: 35px;
+				margin-bottom: 14px;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 175%;
+				color: $indigo-color;
+			}
+			.skillsWrapper {
+				margin-top: 30px;
+				display: flex;
+				width: 400px;
+				gap: 25px;
+				.skillsItem {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 10px;
+				}
+				.skillsImg {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border: 2px solid #e0e0e0;
+					border-radius: 50%;
+					width: 50px;
+					height: 50px;
+				}
+				.skillsDescr {
+					width: 65px;
+					min-height: 30px;
+					font-weight: 400;
+					font-size: 11px;
+					text-align: center; 
+				  }
+			}
+		}
+	}
+	
+	
+}

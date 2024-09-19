@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+.button {
+	width: 200px;
+	height: 56px;
+	background: $ocean-color;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	margin-right: 24px;
+	transition: 0.2s all;
+	cursor: pointer;
+
+	&:hover {
+		background-color: darken(#278FB4, 10%)
+	}
+	
+	&:active {
+		background-color: darken(#278FB4, 20%)
+	}
+}
+
+.pulseBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	background-color: $ocean-color;
+	margin-right: 20px;
+	animation: pulse 2s infinite;
+			  cursor: pointer;
+	@keyframes pulse {
+	  60% {
+		box-shadow: 0 0 0 10px rgba(39, 143, 180, 0.7);
+	  }
+	  100% {
+		box-shadow: 0 0 0 20px rgba(39, 143, 180, 0);
+	  }
+	  90% {
+		box-shadow: 0 0 0 0 rgba(39, 143, 180, 0);
+	  }
+	}
+  }

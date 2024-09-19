@@ -1,9 +1,12 @@
-import MortgageDesign from "../mortgageDesign/MortgageDesign";
+import 'modern-normalize/modern-normalize.css';
+import PromoSection from "../promoSection/PromoSection";
+import TeamSection from "../teamSection/TeamSection";
 
 const App = () => {
   return (
     <div className="App">
-      <MortgageDesign/>
+      <PromoSection/>
+      <TeamSection/>
     </div>
   );
 }
