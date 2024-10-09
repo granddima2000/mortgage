@@ -1,129 +1,152 @@
 @import '../../style/variables.scss';
 
 .mortgageSection {
-  
+  // Если сюда ничего не надо, то что делать? 
+}
 .container {
    display: flex;
 
 }
-  .imageContent {
-    background: url('../../resources/Bitmap.png');
+.imageContent {
+  background: url('../../resources/Bitmap.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 586px;	
+  height: 720px;
+  .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-width: 586px;	
-    height: 720px;
+    width: 268px;
+    margin: 0 0 29px 100px;
 
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 268px;
-      margin: 0 0 29px 100px;
-
-      .subtitle {
-        font-size: 18px;
-        color: #fff;
-      }
-
-      .actionGroup {
-        margin-top: 32px;
-        display: flex;
-        width: 100px;
-        align-items: center;
-
-        .timer {
-          font-size: 13px;
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  .details {
-    display: flex;
-    flex-direction: column;
-    padding: 37px 103px 48px 38px;
-    min-width: 200px;
-    
-    .logo {
-      width: 240px;
-      height: 43px;
-    }
-
-		.titleWrapper {
-			margin-top: 160px;
-			.title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 125%;
-        color: $indigo-color;
-				span {
-					color: $ocean-color;
-				}
-			}
-			.subtitle {
-				margin-top: 26px;
-        margin-bottom: 145px;
-				font-weight: 400;
-        font-size: 14px;
-        line-height: 171%;
-        opacity: 0.5;
-			}
-   
-	 }
-	 .wrapper {
-		margin-top: 33px;
-		display: flex;
-		flex-direction: row;
-
-		.descrBlock {
-			font-weight: 700;
+    .subtitle {
       font-size: 18px;
-			max-width: 200px;
-      height: 43px;
-      margin-right: 42px;
-		}
-		.secondaryBtn {
-      background-color: #fff;
-      border: 1px solid $indigo-color ;
-			width: 181px;
-			height: 56px;
-      color: $indigo-color;
-      &:hover {
-        background-color: lighten($indigo-color, 40%); /* Светлее индиго при наведении */
-        color: #fff; /* Цвет текста при наведении */
-      }
-		}
-	 }
-  }
-  .hamburger-menu {
-    position: absolute;
-    left: 24px;
-    top: 24px;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px; /* Скругленные углы */
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
-  }
-  
-  .line {
-    margin-bottom: 5px;
-    width: 20px;
-    height: 2px;
-    background-color: black;
-    border-radius: 2px; /* Скругленные края линий */
-    &:nth-child(3) {
-      margin-bottom: 0;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .actionGroup {
+      margin-top: 32px;
+      display: flex;
+      width: 100px;
+      align-items: center;
     }
   }
-  
-  .hamburger-menu:hover {
-    background-color: #f2f2f2; /* Светлый фон при наведении */
+}
+
+.btn {
+  composes: pulseBtn from '../../style/shared.module.scss';
+}
+
+.timer {
+  font-size: 13px;
+  color: #fff;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 37px 103px 48px 38px;
+  min-width: 200px;  
+}
+
+.logo {
+  width: 240px;
+  height: 43px;
+}	 
+
+.titleWrapper {
+  margin-top: 160px;
+  height: 100%;
+  .subtitle {
+    margin-top: 26px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    opacity: 0.5;
   }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 125%;
+  color: $indigo-color;
+  span {
+    color: $ocean-color;
+  }
+}
+
+.wrapper {
+  margin: 33px 50px 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.descrBlock {
+  font-weight: 700;
+  font-size: 18px;
+  max-width: 200px;
+  height: 43px;
+  margin-right: 42px;
+}
+
+.secondaryBtn {
+  composes: button from '../../style/shared.module.scss';
+  background-color: #fff;
+  border: 1px solid $indigo-color ;
+  width: 181px;
+  height: 56px;
+  color: $indigo-color;
+}
+
+.hamburger-menu {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+  margin-bottom: 5px;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+  &:nth-child(3) {
+    margin-bottom: 0;
+  }
+}
+
+.hamburger-menu:hover {
+  background-color: #f2f2f2;
+}
+
+
+@media (max-width: 1400px) {
+  .titleWrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1310px) {
+  .titleWrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  // .titleWrapper {
+    
+  // }
 }

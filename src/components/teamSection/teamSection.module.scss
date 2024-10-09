@@ -2,122 +2,136 @@
 
 .teamSection {
 	margin-top: 104px;
-	.container {
-		max-width: 1140px;
-		margin: 0 auto;
-		padding: 0;
-		.title {
-			font-weight: 700;
-			font-size: 36px;
-			text-align: center;
-			color: $indigo-color;
-		}
-		.subtitle {
-			font-weight: 400;
-			font-size: 18px;
-			text-align: center;
-			opacity: 0.5;
-		}
-		.managerCards {
-			display: flex;
-			// flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-			flex-wrap: wrap;
-			width: 100%;
-			padding: 32px;
-			.managerCard {
-				margin-top: 65px;
-				display: flex;
-				flex-direction: column;
-				width: 512px;	
-			}
-			.managerWrapper {
-				position: relative;
-				display: flex;
-				align-items: center;
-				.photo {
+}
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0;
+}
 
-				}
-				.btnWrapper {
-					position: absolute;
-					right: 60px;
-					display: flex;
-					align-items: center;
-					.pulseText {
-						font-weight: 400;
-						font-size: 13px;
-					}
-				}
-			}
-			.managerTitle {
-				margin-top: 28px;
-				font-weight: 700;
-				font-size: 11px;
-				letter-spacing: 0.18em;
-				text-transform: uppercase;
-				color: $ocean-color
-			}
-			.managerName {
-				margin-top: 5px;
-				font-weight: 700;
-				font-size: 28px;
-				line-height: 100%;
-				color: $indigo-color;
-			}
-			.divider {
-				margin-top: 20px;
-				display: block;
-				height: 1px;
-				width: 40px;
-				background-color: #979797;
-			}
-			.managerDescr {
-				margin-top: 17px;
-				font-weight: 400;
-				font-size: 14px;
-				line-height: 171%;
-				opacity: 0.5;
-			}
-			.skillsName {
-				margin-top: 35px;
-				margin-bottom: 14px;
-				font-weight: 700;
-				font-size: 16px;
-				line-height: 175%;
-				color: $indigo-color;
-			}
-			.skillsWrapper {
-				margin-top: 30px;
-				display: flex;
-				width: 400px;
-				gap: 25px;
-				.skillsItem {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					gap: 10px;
-				}
-				.skillsImg {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					border: 2px solid #e0e0e0;
-					border-radius: 50%;
-					width: 50px;
-					height: 50px;
-				}
-				.skillsDescr {
-					width: 65px;
-					min-height: 30px;
-					font-weight: 400;
-					font-size: 11px;
-					text-align: center; 
-				  }
-			}
-		}
+.managerCards {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 32px;
+}
+
+.managerCard {
+	margin-top: 65px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 512px;	
+	height: 100%;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.managerWrapper { // Не разобрался как сделать object-fit :( 
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	// object-fit: cover;	
+	// max-inline-size: 100%;
+	// height: 200px;
+	
+}
+.underWrapper {
+	height: 347px;
+	background-color: #fff;
+	z-index: 2;
+}
+
+.photo {
+	display: block;
+	height: 220px;
+	// object-fit:cover;
+	z-index: 0;
+}
+
+.btnWrapper {
+	position: absolute;
+	right: 60px;
+	display: flex;
+	align-items: center;
+	.pulseText {
+		font-weight: 400;
+		font-size: 13px;
 	}
-	
-	
+}
+
+.managerTitle {
+	composes: smallText from '../../style/shared.module.scss';
+	margin-top: 28px;
+}
+
+.managerName {
+	margin-top: 10px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 100%;
+	color: $indigo-color;
+}
+
+.managerDescr {
+	max-width: 360px;
+	margin-top: 17px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 171%;
+	opacity: 0.5;
+}
+
+.skillsName {
+	margin-top: 35px;
+	margin-bottom: 14px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 175%;
+	color: $indigo-color;
+}
+
+.skillsWrapper {
+	margin-top: 30px;
+	display: flex;
+	width: 400px;
+	gap: 25px;
+}
+
+.skillsItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.skillsImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #e0e0e0;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.skillsDescr {
+	width: 80px;
+	min-height: 30px;
+	font-weight: 400;
+	font-size: 11px;
+	text-align: center; 
+	word-wrap: break-word;
+	}
+
+
+@media(max-width: 1199px) {
+	.managerCards {
+		flex-direction: column;
+	}
 }

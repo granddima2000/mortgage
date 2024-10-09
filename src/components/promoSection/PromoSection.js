@@ -1,7 +1,8 @@
+import styles from './promoSection.module.scss'
+import shared from '../../style/shared.module.scss' // Сделал папку с общими стилями
+
 import triangle from '../../resources/Triangle.png'
 import logo from '../../resources/NAF_Logo.png'
-import styles from './promoSection.module.scss'
-import '../../style/button.scss';
 
 
 const PromoSection = () => {
@@ -12,7 +13,7 @@ const PromoSection = () => {
 					<div className={styles.wrapper}>
 						<div className={styles.subtitle}>Why a mortgage is so much more than just a rate?</div>
 						<div className={styles.actionGroup}>
-							<div className='pulseBtn'>
+							<div className={styles.btn}>
 								<img className={styles.triangle} src={triangle} alt="icon" />
 							</div>
 							<div className={styles.timer}>0:34</div>
@@ -32,12 +33,13 @@ const PromoSection = () => {
 							(Pssst...it’s not just about clicking a button)
 						</div>
 					</div>
-					<div className='divider'></div>
+					<div className={shared.divider}></div>
 					<div className={styles.wrapper}>
 						<div className={styles.descrBlock}>Let us help you create <br />
 						your mortgage journey</div>
-						<button className='button'>Get started</button>
-						<button className={`button ${styles.secondaryBtn}`}>Schedule a time</button>
+						<button className={shared.button}>Get started</button>
+						<button className={styles.secondaryBtn}>Schedule a time</button>
+						{/* Я не понял как побороть перебивку стилей :( Использовал даже extends в scss */}
 					</div>
 				</div>
 				<div class={styles['hamburger-menu']}>

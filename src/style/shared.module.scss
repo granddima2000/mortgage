@@ -23,6 +23,7 @@
 }
 
 .pulseBtn {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -31,6 +32,12 @@
 	border-radius: 100%;
 	background-color: $ocean-color;
 	margin-right: 20px;
+	img {
+		position: absolute;
+		right: 15px;
+		width: 11px;
+  		height: 16px;
+	}
 	animation: pulse 2s infinite;
 			  cursor: pointer;
 	@keyframes pulse {
@@ -45,3 +52,34 @@
 	  }
 	}
   }
+
+.divider {
+	display: block;
+	background-color: #979797;
+	width: 100%;
+	height: 1px;
+	opacity: 0.2;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	text-align: center;
+	color: $indigo-color;
+}
+
+.subtitle {
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+	opacity: 0.5;
+}
+
+.smallText {
+	// margin: 8px 0 12px 0;
+	font-weight: 700;
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: $ocean-color;
+}

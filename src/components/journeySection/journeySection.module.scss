@@ -1,0 +1,222 @@
+@import '../../style/variables.scss';
+
+.journey {
+	margin-top: 104px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	text-align: start;
+	color: $indigo-color
+}
+
+.subtitle {
+	font-weight: 400;
+	font-size: 18px;
+	opacity: 0.5;
+}
+
+.content {
+	margin-top: 49px;
+	display: flex;
+	position: relative;
+}
+
+.leftWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	width: 380px;
+	height: 210px;
+	margin-right: 64px;
+	
+}
+
+.step {
+	border: 1px solid $grey-color;
+	border-radius: 4px;
+	padding: 28px 72px 44px 38px;
+	width: 380px;
+	height: 210px;
+	transition: 0.5s all;
+	margin-bottom: 24px;
+	cursor: pointer;
+	&:hover {
+		background-color: $ocean-color;
+		transform: translateX(30px);
+	}
+	&:nth-child(3) {
+		margin-bottom: 0;
+	}
+}
+
+.whiteDivider {
+	composes: divider from '../../style/shared.module.scss';
+	margin-top: 20px;
+	display: block;
+	height: 1px;
+	width: 40px;
+	background-color: #979797;
+	opacity: 0.6;
+}
+
+.stepNumber {
+	font-weight: 700;
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: $ocean-color;
+}
+
+.title {
+	margin-top: 10px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 100%;
+	color: $indigo-color;
+}
+
+.descr {
+	margin-top: 17px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 171%;
+	opacity: 0.5;
+}
+
+
+.rightWrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2fr 1fr;
+	gap: 20px;
+	width: 796px;
+	height: 694px;
+  }
+  
+//   @media screen and (min-width: 768px) {
+// 	.rightWrapper {
+// 	  grid-template-columns: 1fr 1fr;
+// 	  grid-template-rows: auto;
+// 	  gap: 20px;
+// 	}
+  
+// 	.videoBlock:first-child {
+// 	  grid-column: 1 / span 2;
+// 	}
+//   }
+  
+  .videoBlock {
+	background: url('../../resources/blueMan.png') center center / cover no-repeat;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  .videoBlock:first-child {
+	grid-column: 1 / span 2;
+  }
+  
+  .videoWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+
+  .btn {
+	composes: pulseBtn from '../../style/shared.module.scss';
+	background-color: #fff;
+	margin: 0 auto;
+	animation: pulse 2s infinite;
+	img {
+		filter: invert(1);
+	}
+	@keyframes pulse {
+		60% {
+		  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.7);
+		}
+		100% {
+		  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+		}
+		90% {
+		  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+		}
+	  }
+  }
+  .triangle {
+	width: 40px;
+	height: 40px;
+  }
+  
+  .videoDescr {
+	width: 290px;
+	margin-top: 20px;
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+  }
+  
+  .videoDuration {
+	color: #fff;
+	margin-top: 29px;
+	font-weight: 400;
+	font-size: 13px;
+	text-align: center;
+  }
+
+
+
+  .nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 100px;
+	left: -55px;
+  }
+  
+  .circle {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid #cccccc; 
+	background-color: transparent;
+	margin: 4px 0;
+  }
+  
+  .circleFilled {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #00a5d6; /* Синий цвет для заполненного круга */
+	border: 2px solid #a5e2f5; /* Голубой ободок */
+	margin: 4px 0;
+  }
+
+  .circleFilled.active {
+	box-shadow: 0 0 0 8px rgba(0, 165, 214, 0.2); /* Появляется только при активном состоянии */
+	transform: scale(1.2); /* Увеличиваем размер при активации, чтобы привлечь внимание */
+  }
+  
+  .dottedLine {
+	width: 2px;
+	height: 200px; 
+	background: repeating-linear-gradient(
+		to bottom,
+		#cccccc,
+		#cccccc 1px,
+		transparent 3px,
+		transparent 9px
+  );
+  }
