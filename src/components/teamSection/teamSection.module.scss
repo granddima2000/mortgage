@@ -4,58 +4,66 @@
 	margin-top: 104px;
 }
 .container {
-	max-width: 1140px;
+	// max-width: 1140px;
+	max-width: 1088px;
 	margin: 0 auto;
-	padding: 0;
 }
 
+.subtitle {
+	composes: subtitle from '../../style/shared.module.scss';
+}
+// И вместо этой комбинации оставить лишь padding у обертки карточек. У самих карточек убрать отступы, да и верхний padding можно
+// - Я решил сделать так: 
 .managerCards {
+	margin-top: 65px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	width: 100%;
-	padding: 32px;
+	// gap: 64px;
 }
 
 .managerCard {
-	margin-top: 65px;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
 	width: 512px;	
-	height: 100%;
+	// min-height: 567px;
+	// height: fit-content;
 	background-color: white;
 	border-radius: 8px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+	
 }
 
-.managerWrapper { // Не разобрался как сделать object-fit :( 
+.managerWrapper {
 	position: relative;
 	display: flex;
 	align-items: center;
-	overflow: hidden;
-	// object-fit: cover;	
-	// max-inline-size: 100%;
-	// height: 200px;
-	
+	height: 210px;
 }
 .underWrapper {
-	height: 347px;
 	background-color: #fff;
-	z-index: 2;
+	padding: 28px 32px 32px 32px;
+	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1)
 }
 
 .photo {
+	position: relative;
 	display: block;
-	height: 220px;
-	// object-fit:cover;
-	z-index: 0;
-}
+	height: 100%;
+	width: 389px;
+	padding-left: 35px;
+	max-inline-size: 72%;
+	overflow: hidden;
+	img {
+		position: absolute;
 
+		height: auto;
+		width: 100%;
+		object-fit: contain;
+	}
+}
+	// 	// У меня шла жесткая борьба с изображением. Надеюсь, что +- справился?
 .btnWrapper {
 	position: absolute;
-	right: 60px;
+	right: 22px;
 	display: flex;
 	align-items: center;
 	.pulseText {
@@ -66,40 +74,44 @@
 
 .managerTitle {
 	composes: smallText from '../../style/shared.module.scss';
-	margin-top: 28px;
 }
 
 .managerName {
-	margin-top: 10px;
-	font-weight: 700;
-	font-size: 28px;
-	line-height: 100%;
+	composes: sectionTitle from '../../style/shared.module.scss';
+	margin-top: 5px;
+	// Как вычислить margin-top правильно, если по макету у Justin 8px, а у Scott 5px ? 
 	color: $indigo-color;
+}
+
+.divider {
+	composes: divider from '../../style/shared.module.scss';
+	width: 40px;
+	margin-top: 20px;
+	opacity: 0.6;
 }
 
 .managerDescr {
 	max-width: 360px;
-	margin-top: 17px;
+	margin-top: 18px;
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 171%;
+	line-height: 24px;
 	opacity: 0.5;
 }
 
 .skillsName {
-	margin-top: 35px;
-	margin-bottom: 14px;
+	margin-top: 25px;
+	margin-bottom: 11px;
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 175%;
 	color: $indigo-color;
 }
 
 .skillsWrapper {
-	margin-top: 30px;
+	margin-top: 16px;
 	display: flex;
-	width: 400px;
-	gap: 25px;
+	justify-content: space-between;
+	max-width: 336px;
 }
 
 .skillsItem {
@@ -107,7 +119,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 7px;
+	// width: 78px;
 }
 
 .skillsImg {
@@ -116,19 +129,31 @@
 	align-items: center;
 	border: 2px solid #e0e0e0;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+	width: 48px;
+	height: 48px;
+	img {
+		width: 20px;
+    	height: 20px;
+	}
 }
 
 .skillsDescr {
-	width: 80px;
-	min-height: 30px;
+	min-width: 48px;
+	max-width: 78px;
+	height: 28px;
 	font-weight: 400;
 	font-size: 11px;
 	text-align: center; 
 	word-wrap: break-word;
 	}
 
+
+@media(max-width: 1399px) {
+	.managerCards {
+		// flex-wrap: wrap;
+	}
+	
+}
 
 @media(max-width: 1199px) {
 	.managerCards {

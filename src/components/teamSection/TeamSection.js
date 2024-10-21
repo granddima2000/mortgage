@@ -12,7 +12,7 @@ import helper from '../../resources/skillsIcon/helper.svg'
 import users from '../../resources/skillsIcon/users.svg'
 import manager1 from '../../resources/manager1.png'
 import manager2 from '../../resources/manager2.png'
-import triangle from '../../resources/Triangle.png'
+import triangle from '../../resources/icon/Triangle.png'
 
 
 
@@ -21,7 +21,7 @@ const TeamSection = () => {
 		<section className={styles.teamSection}>
 			<div className={styles.container}>
 			<h2 className={shared.title}>Getting a mortgage funded takes a village.</h2>
-			<h3 className={shared.subtitle}>Well, not quite a village, but two of the villages best lending heroes!</h3>
+			<h3 className={styles.subtitle}>Well, not quite a village, but two of the villages best lending heroes!</h3>
 			<div className={styles.managerCards}>
 				<div className={styles.managerCard}>
 					<div className={styles.managerWrapper}>
@@ -33,17 +33,17 @@ const TeamSection = () => {
 							<div className={shared.pulseBtn}>
 								<img className={styles.triangle} src={triangle} alt="triangle" />
 							</div>
-							<div className={styles.pulseText}>Meet Justin</div>
+							<h3 className={styles.pulseText}>Meet Justin</h3>
 						</div>
 					</div>
 					<div className={styles.underWrapper}>
 						<div className={styles.managerTitle}>The master mind</div>
 						<div className={styles.managerName}>Justin</div>
-						<div className={shared.shortDivider}></div>
-						<div className={styles.managerDescr}>Rates change, but every mortgage journey starts with
+						<span className={styles.divider}></span>
+						<div className={styles.managerDescr}>Rates change, but every mortgage journey starts with <br />
 						a relationship. (Pssst...it’s not just about clicking a button)</div>
 						<div className={styles.skillsName}>Skills</div>
-						<div className={shared.divider}></div>
+						<span className={shared.divider}></span>
 						<div className={styles.skillsWrapper}>
 							<div className={styles.skillsItem}>
 								<div className={styles.skillsImg}>
@@ -88,12 +88,12 @@ const TeamSection = () => {
 					</div>
 					<div className={styles.underWrapper}>
 						<div className={styles.managerTitle}>The educator</div>
-						<div className={styles.managerName}>Scott</div>
-						<div className={shared.shortDivider}></div>
-						<div className={styles.managerDescr}>Rates change, but every mortgage journey starts with
+						<h3 className={styles.managerName}>Scott</h3>
+						<span className={styles.divider}></span>
+						<div className={styles.managerDescr}>Rates change, but every mortgage journey starts with <br />	
 						a relationship. (Pssst...it’s not just about clicking a button)</div>
 						<div className={styles.skillsName}>Skills</div>
-						<div className={shared.divider}></div>
+						<span className={shared.divider}></span>
 						<div className={styles.skillsWrapper}>
 							<div className={styles.skillsItem}>
 								<div className={styles.skillsImg}>

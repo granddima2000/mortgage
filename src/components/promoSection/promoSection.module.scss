@@ -1,38 +1,31 @@
 @import '../../style/variables.scss';
 
-.mortgageSection {
-  // Если сюда ничего не надо, то что делать? 
-}
 .container {
    display: flex;
 
 }
 .imageContent {
-  background: url('../../resources/Bitmap.png');
+  background: url('../../resources/bg/Bitmap.png') center center / cover no-repeat;
+  padding: 572px 208px 29px 102px;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  min-width: 586px;	
-  height: 720px;
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 268px;
-    margin: 0 0 29px 100px;
+  gap: 32px;
+  width: 276px;
+}
 
-    .subtitle {
-      font-size: 18px;
-      font-weight: 700;
-      color: #fff;
-    }
+.subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  color: #fff;
+}
 
-    .actionGroup {
-      margin-top: 32px;
-      display: flex;
-      width: 100px;
-      align-items: center;
-    }
-  }
+.actionGroup {
+  display: flex;
+  align-items: center;
 }
 
 .btn {
@@ -41,45 +34,47 @@
 
 .timer {
   font-size: 13px;
+  font-weight: 400;
   color: #fff;
 }
 
 .details {
-  display: flex;
-  flex-direction: column;
   padding: 37px 103px 48px 38px;
-  min-width: 200px;  
 }
 
 .logo {
   width: 240px;
-  height: 43px;
 }	 
 
 .titleWrapper {
   margin-top: 160px;
-  height: 100%;
-  .subtitle {
-    margin-top: 26px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 171%;
-    opacity: 0.5;
-  }
+}
+
+.descr {
+  margin-top: 26px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.5;
+}
+
+.divider {
+  composes: divider from '../../style/shared.module.scss';
+  margin-top: 145px;
 }
 
 .title {
   font-weight: 700;
   font-size: 48px;
-  line-height: 125%;
+  line-height: 60px;
   color: $indigo-color;
   span {
     color: $ocean-color;
   }
 }
 
-.wrapper {
-  margin: 33px 50px 0 0;
+.wrapperBtn {
+  margin-top: 33px;
   display: flex;
   flex-direction: row;
 }
@@ -87,9 +82,13 @@
 .descrBlock {
   font-weight: 700;
   font-size: 18px;
-  max-width: 200px;
-  height: 43px;
   margin-right: 42px;
+}
+
+.button {
+  composes: button from '../../style/shared.module.scss';
+  margin-right: 24px;
+  gap: 38px;
 }
 
 .secondaryBtn {
@@ -97,16 +96,17 @@
   background-color: #fff;
   border: 1px solid $indigo-color ;
   width: 181px;
-  height: 56px;
   color: $indigo-color;
+  &:hover {
+    color: #fff;
+  }
 }
 
 .hamburger-menu {
   position: absolute;
   left: 24px;
   top: 24px;
-  width: 50px;
-  height: 50px;
+  padding: 19px 17px 20px 17px;
   background-color: white;
   display: flex;
   justify-content: center;

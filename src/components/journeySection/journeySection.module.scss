@@ -5,27 +5,28 @@
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1240px;
 	margin: 0 auto;
 }
 
 .title {
-	font-weight: 700;
-	font-size: 36px;
+	composes: title from '../../style/shared.module.scss';
 	text-align: start;
-	color: $indigo-color
+	// line-height: 167%;
 }
 
 .subtitle {
-	font-weight: 400;
-	font-size: 18px;
-	opacity: 0.5;
+	composes: subtitle from '../../style/shared.module.scss';
+	// Я не понимаю, нужен ли тут отступ? На макете вижу, но в моей верстке слишком огромный оступ.
+	// margin-top: 21px;
+	text-align: start;
 }
 
 .content {
 	margin-top: 49px;
 	display: flex;
 	position: relative;
+	gap: 64px;
 }
 
 .leftWrapper {
@@ -33,98 +34,86 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	width: 380px;
-	height: 210px;
-	margin-right: 64px;
-	
+	gap: 24px;
+}
+
+.stepTitle {
+	composes: sectionTitle from '../../style/shared.module.scss';
+	margin-top: 9px;
+	color: $indigo-color;
 }
 
 .step {
 	border: 1px solid $grey-color;
 	border-radius: 4px;
-	padding: 28px 72px 44px 38px;
+	padding: 28px 44px 41px 38px;
 	width: 380px;
-	height: 210px;
 	transition: 0.5s all;
-	margin-bottom: 24px;
 	cursor: pointer;
 	&:hover {
 		background-color: $ocean-color;
 		transform: translateX(30px);
-	}
-	&:nth-child(3) {
-		margin-bottom: 0;
+		.stepNumber {
+			color: #fff;
+			opacity: 0.5;
+		}
+		.stepTitle {
+			color: #fff;
+		}
+		.descr {
+			color: #fff;
+			opacity: 0.7;
+		}
 	}
 }
 
-.whiteDivider {
+.divider {
 	composes: divider from '../../style/shared.module.scss';
 	margin-top: 20px;
-	display: block;
-	height: 1px;
 	width: 40px;
 	background-color: #979797;
 	opacity: 0.6;
 }
 
 .stepNumber {
-	font-weight: 700;
-	font-size: 11px;
-	letter-spacing: 0.18em;
-	text-transform: uppercase;
-	color: $ocean-color;
+	composes: smallText from '../../style/shared.module.scss';
+	
 }
 
-.title {
-	margin-top: 10px;
-	font-weight: 700;
-	font-size: 28px;
-	line-height: 100%;
-	color: $indigo-color;
-}
 
 .descr {
 	margin-top: 17px;
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 171%;
+	line-height: 24px;
 	opacity: 0.5;
 }
 
 
 .rightWrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 2fr 1fr;
-	gap: 20px;
 	width: 796px;
-	height: 694px;
-  }
+}
   
-//   @media screen and (min-width: 768px) {
-// 	.rightWrapper {
-// 	  grid-template-columns: 1fr 1fr;
-// 	  grid-template-rows: auto;
-// 	  gap: 20px;
-// 	}
-  
-// 	.videoBlock:first-child {
-// 	  grid-column: 1 / span 2;
-// 	}
-//   }
-  
-  .videoBlock {
-	background: url('../../resources/blueMan.png') center center / cover no-repeat;
+.gridContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 436px 234px;
+	gap: 24px;
+}
+
+.videoBlock {
+	background: url('../../resources/bg/blueMan.png') center center / cover no-repeat;
 	padding: 20px;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-  }
-  .videoBlock:first-child {
+}
+
+.videoBlock:first-child {
 	grid-column: 1 / span 2;
-  }
+}
   
   .videoWrapper {
 	display: flex;
@@ -152,10 +141,6 @@
 		  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
 		}
 	  }
-  }
-  .triangle {
-	width: 40px;
-	height: 40px;
   }
   
   .videoDescr {
@@ -195,7 +180,7 @@
 	margin: 4px 0;
   }
   
-  .circleFilled {
+  .circleActive {
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
@@ -220,3 +205,27 @@
 		transparent 9px
   );
   }
+
+
+@media (max-width: 1128px) {
+	.gridContainer {
+		grid-template-rows: repeat(3, 210px);
+		grid-template-columns: repeat(1, 1fr);
+		.videoBlock:first-child {
+			grid-column: auto;
+		}
+	}
+}
+
+//     @media screen and (min-width: 768px) {
+// 	.rightWrapper {
+// 	  grid-template-columns: 1fr 1fr;
+// 	  grid-template-rows: auto;
+// 	  gap: 20px;
+// 	}
+  
+// 	.videoBlock:first-child {
+// 	  grid-column: 1 / span 2;
+// 	}
+//   }
+  

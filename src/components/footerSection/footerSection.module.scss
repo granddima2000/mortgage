@@ -1,0 +1,87 @@
+@import '../../style/variables.scss';
+
+.footer {
+	margin-top: 96px;
+	padding: 20px 100px 35px 100px;
+	background-color: #126893;
+}
+
+.container {
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	margin-top: 13px;
+	// fill: white;
+}
+
+
+.button {
+	composes: button from '../../style/shared.module.scss';
+}
+
+.divider {
+	composes: divider from '../../style/shared.module.scss';
+	margin-top: 21px;
+}
+
+.wrap {
+	margin-top: 31px;
+	// Как лучше footer делать? Через grid или flex ? 
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 20px;
+	margin-bottom: 56px;
+}
+
+.section {
+	
+}
+
+.underItem {
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	color: #fff;	
+}
+
+.entry {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #fff;
+	opacity: 0.7;
+	text-decoration: none;
+}
+
+.descr {
+	width: 499px;
+	font-weight: 300;
+	font-size: 10px;
+	line-height: 20px;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.lastDescr {
+	margin-top: 43px;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	color: #fff;
+}

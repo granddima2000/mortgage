@@ -3,13 +3,13 @@ import shared from '../../style/shared.module.scss';
 
 import google from '../../resources/logo/google.png';
 import zillow from '../../resources/logo/zillow.png';
-import leftBtn from '../../resources/arrowLeft.png';
-import rightBtn from '../../resources/arrowRight.png';
+import leftBtn from '../../resources/icon/arrowLeft.png';
+import rightBtn from '../../resources/icon/arrowRight.png';
 import women from '../../resources/person/personCircle1.png';
 import men from '../../resources/person/personCircle2.png'
-import quoteImg from '../../resources/right-quote.png';
-import googleIcon from '../../resources/icon/googleIcon.png';
-import zi from '../../resources/icon/zi.png';
+import quoteImg from '../../resources/icon/right-quote.png';
+import googleIcon from '../../resources/logo/googleIcon.png';
+import zi from '../../resources/logo/zi.png';
 
 
 
@@ -22,8 +22,10 @@ const ReviewsSection = () => {
 				<div className={styles.ratingWrapper}>
 					<div className={styles.ratingBlock}>
 						<div className={styles.leftContent}>
-							<div className={shared.smallText}>4.5 stars rating</div>
-							<img className={styles.logoCompany} src={google} alt="google" />
+							<div className={styles.ratingText}>4.5 stars rating</div>
+							<div className={styles.imgEnv}>
+								<img className={styles.logoCompany} src={google} alt="google" />
+							</div>
 							<div className={shared.divider}></div>
 							<div className={styles.reviewSum}>
 								Based on <span className={styles.underlineText}>85 reviews</span>
@@ -59,8 +61,10 @@ const ReviewsSection = () => {
 					</div>
 					<div className={styles.ratingBlock}>
 						<div className={styles.leftContent}>
-							<div className={shared.smallText}>4 stars rating</div>
-							<img className={styles.logoCompany} src={zillow} alt="zillow" />
+							<div className={styles.ratingText}>4 stars rating</div>
+							<div className={styles.imgEnv}>
+								<img className={styles.logoCompany} src={zillow} alt="zillow" />
+							</div>
 							<div className={shared.divider}></div>
 							<div className={styles.reviewSum}>
 								Based on <span className={styles.underlineText}>22 reviews</span>
@@ -95,14 +99,13 @@ const ReviewsSection = () => {
 									<img src={women} alt="women" />
 								</div>
 								<div className={styles.details}>
-									<span className={shared.smallText}>New York</span>
+									<span className={styles.ratingText}>New York</span>
 									<div className={styles.nameWrapper}>
 										<h3 className={styles.name}>Emily Pearson</h3>
 										<div className={styles.icon}>
 											<img src={googleIcon} alt="googleIcon" />
 										</div>
 									</div>
-									
 									<span className={styles.role}>Engineer</span>
 								</div>
 							</div>
@@ -120,7 +123,7 @@ const ReviewsSection = () => {
 									<img src={men} alt="men" />
 								</div>
 								<div className={styles.details}>
-									<span className={shared.smallText}>Los Angeles</span>
+									<span className={styles.ratingText}>Los Angeles</span>
 									<div className={styles.nameWrapper}>
 										<h3 className={styles.name}>Michael Bronson</h3>
 										<div className={styles.icon}>
@@ -145,7 +148,7 @@ const ReviewsSection = () => {
 									<img src={men} alt="men" />
 								</div>
 								<div className={styles.details}>
-									<span className={shared.smallText}>Los Angeles</span>
+									<span className={styles.ratingText}>Los Angeles</span>
 									<div className={styles.nameWrapper}>
 										<h3 className={styles.name}>Michael Bronson</h3>
 										<div className={styles.icon}>

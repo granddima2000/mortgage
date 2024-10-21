@@ -1,0 +1,128 @@
+@import '../../style/variables.scss';
+
+
+.cards {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 397px));
+    grid-template-rows: repeat(auto-fill, minmax(266px, auto));
+    grid-auto-columns: minmax(150px, 397px);
+    grid-auto-rows: minmax(266px, auto);
+	gap: 20px;
+}
+
+.item {
+	padding: 24px 32px 26px 32px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	
+}
+
+.divider {
+	composes: divider from '../../style/shared.module.scss';
+	width: 100%;
+	margin-top: 24px;
+}
+
+.cardWrapper {
+	display: flex;
+	gap: 24px;
+}
+
+.title {
+	composes: title from '../../style/shared.module.scss';
+	text-align: start;
+	line-height: 36px;
+}
+
+.cardImg {
+	width: 96px;
+	height: 120px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		max-width: 100%;
+  		max-height: 100%;
+		object-fit: contain;
+		transform: scale(1.5);
+	}
+}
+
+.cardNone {
+	width: 96px;
+	height: 120px;
+	background-color: #D8D8D8;
+}
+
+.textWrap {
+	display: flex;
+	flex-direction: column;
+	gap: 17px;	
+}
+
+.blueText {
+	composes: smallText from '../../style/shared.module.scss';
+}
+
+.textContent {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 130%;
+	color: $indigo-color;
+	width: 181px;
+}
+
+.buttonRight {
+	margin-top: 23px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.button {
+	composes: button from '../../style/shared.module.scss';
+	display: flex;
+	padding: 13px 15px 13px 29px;
+	gap: 15px;
+	text-align: center;
+	border-radius: 22px;
+	width: 144px;
+	height: 44px;
+	animation: pulse 2s infinite;
+			  cursor: pointer;
+	@keyframes pulse {
+	  60% {
+		box-shadow: 0 0 0 10px rgba(39, 143, 180, 0.7);
+	  }
+	  100% {
+		box-shadow: 0 0 0 20px rgba(39, 143, 180, 0);
+	  }
+	  90% {
+		box-shadow: 0 0 0 0 rgba(39, 143, 180, 0);
+	  }
+	}
+}
+
+.eyeButton {
+	composes: button from '../../style/shared.module.scss';
+	border-radius: 22px;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: pulse 2s infinite;
+			  cursor: pointer;
+	@keyframes pulse {
+	  60% {
+		box-shadow: 0 0 0 10px rgba(39, 143, 180, 0.7);
+	  }
+	  100% {
+		box-shadow: 0 0 0 20px rgba(39, 143, 180, 0);
+	  }
+	  90% {
+		box-shadow: 0 0 0 0 rgba(39, 143, 180, 0);
+	  }
+	}
+}
