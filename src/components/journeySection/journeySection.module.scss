@@ -4,11 +4,6 @@
 	margin-top: 104px;
 }
 
-.container {
-	max-width: 1240px;
-	margin: 0 auto;
-}
-
 .title {
 	composes: title from '../../style/shared.module.scss';
 	text-align: start;
@@ -46,7 +41,7 @@
 .step {
 	border: 1px solid $grey-color;
 	border-radius: 4px;
-	padding: 28px 44px 41px 38px;
+	padding: 28px 44px 44px 38px;
 	width: 380px;
 	transition: 0.5s all;
 	cursor: pointer;
@@ -99,133 +94,72 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 436px 234px;
 	gap: 24px;
+	
 }
 
-.videoBlock {
-	background: url('../../resources/bg/blueMan.png') center center / cover no-repeat;
-	padding: 20px;
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.videoBlock:first-child {
-	grid-column: 1 / span 2;
-}
-  
-  .videoWrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.gridContainer > :first-child {
+	grid-column: 1 / span 2; /* Первый элемент занимает две колонки */
   }
 
-  .btn {
-	composes: pulseBtn from '../../style/shared.module.scss';
-	background-color: #fff;
-	margin: 0 auto;
-	animation: pulse 2s infinite;
-	img {
-		filter: invert(1);
-	}
-	@keyframes pulse {
-		60% {
-		  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.7);
-		}
-		100% {
-		  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-		}
-		90% {
-		  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-		}
-	  }
-  }
-  
-  .videoDescr {
-	width: 290px;
-	margin-top: 20px;
-	font-weight: 700;
-	font-size: 18px;
-	text-align: center;
-	color: #fff;
-  }
-  
-  .videoDuration {
-	color: #fff;
-	margin-top: 29px;
-	font-weight: 400;
-	font-size: 13px;
-	text-align: center;
-  }
-
-
-
-  .nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: absolute;
-	top: 100px;
-	left: -55px;
-  }
-  
-  .circle {
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	border: 2px solid #cccccc; 
-	background-color: transparent;
-	margin: 4px 0;
-  }
-  
-  .circleActive {
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	background-color: #00a5d6; /* Синий цвет для заполненного круга */
-	border: 2px solid #a5e2f5; /* Голубой ободок */
-	margin: 4px 0;
-  }
-
-  .circleFilled.active {
-	box-shadow: 0 0 0 8px rgba(0, 165, 214, 0.2); /* Появляется только при активном состоянии */
-	transform: scale(1.2); /* Увеличиваем размер при активации, чтобы привлечь внимание */
-  }
-  
-  .dottedLine {
-	width: 2px;
-	height: 200px; 
-	background: repeating-linear-gradient(
-		to bottom,
-		#cccccc,
-		#cccccc 1px,
-		transparent 3px,
-		transparent 9px
-  );
-  }
-
-
-@media (max-width: 1128px) {
-	.gridContainer {
-		grid-template-rows: repeat(3, 210px);
-		grid-template-columns: repeat(1, 1fr);
-		.videoBlock:first-child {
-			grid-column: auto;
-		}
-	}
-}
-
-//     @media screen and (min-width: 768px) {
-// 	.rightWrapper {
-// 	  grid-template-columns: 1fr 1fr;
-// 	  grid-template-rows: auto;
-// 	  gap: 20px;
+// .gridContainer:first-child {
+// 		grid-column: 1 / span 2;
 // 	}
-  
-// 	.videoBlock:first-child {
-// 	  grid-column: 1 / span 2;
+// .videoBlock:first-child {
+// 	grid-column: 1 / span 2;
+// }
+
+.nav {
+display: flex;
+flex-direction: column;
+align-items: center;
+position: absolute;
+top: 100px;
+left: -55px;
+}
+
+.circle {
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: 2px solid #cccccc; 
+background-color: transparent;
+margin: 4px 0;
+cursor: pointer;
+}
+
+.circleActive {
+width: 16px;
+height: 16px;
+border-radius: 50%;
+background-color: #00a5d6; /* Синий цвет для заполненного круга */
+border: 2px solid #a5e2f5; /* Голубой ободок */
+margin: 4px 0;
+}
+
+.circleFilled.active {
+box-shadow: 0 0 0 8px rgba(0, 165, 214, 0.2); /* Появляется только при активном состоянии */
+transform: scale(1.2); /* Увеличиваем размер при активации, чтобы привлечь внимание */
+}
+
+.dottedLine {
+width: 2px;
+height: 200px; 
+background: repeating-linear-gradient(
+	to bottom,
+	#cccccc,
+	#cccccc 1px,
+	transparent 3px,
+	transparent 9px
+);
+}
+
+
+// @media (max-width: 1128px) {
+// 	.gridContainer {
+// 		grid-template-rows: repeat(3, 210px);
+// 		grid-template-columns: repeat(1, 1fr);
+// 		.videoBlock:first-child {
+// 			grid-column: auto;
+// 		}
 // 	}
-//   }
-  
+// }

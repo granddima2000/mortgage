@@ -12,14 +12,11 @@ import helper from '../../resources/skillsIcon/helper.svg'
 import users from '../../resources/skillsIcon/users.svg'
 import manager1 from '../../resources/manager1.png'
 import manager2 from '../../resources/manager2.png'
-import triangle from '../../resources/icon/Triangle.png'
-
-
+import triangle from '../../resources/icon/Triangle.svg'
 
 const TeamSection = () => {
 	return (
 		<section className={styles.teamSection}>
-			<div className={styles.container}>
 			<h2 className={shared.title}>Getting a mortgage funded takes a village.</h2>
 			<h3 className={styles.subtitle}>Well, not quite a village, but two of the villages best lending heroes!</h3>
 			<div className={styles.managerCards}>
@@ -124,8 +121,6 @@ const TeamSection = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			
 			</div>
 		</section>
 	);

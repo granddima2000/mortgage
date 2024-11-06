@@ -1,9 +1,10 @@
 @import '../../style/variables.scss';
 
-.container {
-   display: flex;
-
+.mortgageSection {
+  display: flex;
+  // min-height: 100vh;
 }
+
 .imageContent {
   background: url('../../resources/bg/Bitmap.png') center center / cover no-repeat;
   padding: 572px 208px 29px 102px;
@@ -103,7 +104,7 @@
 }
 
 .hamburger-menu {
-  position: absolute;
+  position: fixed;
   left: 24px;
   top: 24px;
   padding: 19px 17px 20px 17px;
@@ -132,12 +133,6 @@
   background-color: #f2f2f2;
 }
 
-
-@media (max-width: 1400px) {
-  .titleWrapper {
-    margin-top: 50px;
-  }
-}
 
 @media (max-width: 1310px) {
   .titleWrapper {

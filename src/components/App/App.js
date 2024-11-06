@@ -9,6 +9,11 @@ import FooterSection from '../footerSection/FooterSection';
 
 import styles from './app.module.scss';
 import ResourceSection from '../resourcesSection/ResourcesSection';
+import SpeakerSection from '../page/mortgageBlog/speakerSection/SpeakerSection';
+import GalleryVideoSection from '../page/mortgageBlog/videoSection/GalleryVideoSection';
+import Container from '../container/Container'; // Хорошее ли это решение создать отдельный компонент container ?
+
+// В моменте с <section className={styles.education}> - так можно делать? У меня возникают сомнения, что я делаю что-то здесь не так.
 
 const App = () => {
   return (
@@ -18,17 +23,22 @@ const App = () => {
         <TeamSection/>
         <JourneySection/>
         <ReviewsSection/>
-        <div className={styles.education}>
-          <div className={styles.container}>
+        <section className={styles.education}> 
+          <Container>
             <div className={styles.educationWrapper}>
                 <EducationSection/>
                 <ResourceSection/>
             </div>
-          </div>
-        </div>
-			  
-				
-        
+          </Container>
+        </section>
+        <FooterSection/>
+
+        <SpeakerSection/>
+        <GalleryVideoSection/>
+        <Container>
+         	<ResourceSection className={'resourceSectionMargin'}/>
+         	<EducationSection className={'blogCards'}/>
+        </Container>
         <FooterSection/>
       </div>
     </div>

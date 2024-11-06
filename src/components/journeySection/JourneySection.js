@@ -1,12 +1,31 @@
+
+import VideoBlock from '../page/videoBlock/VideoBlock';
+import Container from '../container/Container';
 import styles from './journeySection.module.scss';
 
-import triangle from '../../resources/icon/Triangle.png';
+// import triangle from '../../resources/icon/Triangle.svg';
 
 
 const JourneySection = () => {
+
+    const videoData = [
+        {
+          descr: "The difference between «fixed rate» and «adjustable»",
+          time: "0:29"
+        },
+        {
+          descr: "What are points and credits?",
+          time: "0:27"
+        },
+        {
+          descr: "Why a mortgage is so much more than just a rate?",
+          time: "0:34"
+        }
+      ];
+
 	return (
 		<section className={styles.journey}>
-			<div className={styles.container}>
+			<Container>
 				<h2 className={styles.title}>Your mortgage journey is a story</h2>
 				<p className={styles.subtitle}>It's not just about clicking a button</p>
         <div className={styles.content}>
@@ -35,40 +54,12 @@ const JourneySection = () => {
           </div>
           <div className={styles.rightWrapper}>
             <div className={styles.gridContainer}>
-                <div className={styles.videoBlock}>
-                    <div className={styles.videoWrapper}>
-                        <div className={styles.btn}>
-                            <img className={styles.triangle} src={triangle} alt="triangle" />
-                        </div>
-                        <div className={styles.videoDescr}>The difference between «fixed rate»
-                        and «adjustable»</div>
-                        <div className={styles.videoDuration}>0:29</div>
-                    </div>
-                    
-                </div>
-                <div className={styles.videoBlock}>
-                    <div className={styles.videoWrapper}>
-                        <div className={styles.btn}>
-                            <img className={styles.triangle} src={triangle} alt="triangle" />
-                        </div>
-                        <div className={styles.videoDescr}>What are points and credits?</div>
-                        <div className={styles.videoDuration}>0:27</div>
-                    </div>
-                </div>
-                <div className={styles.videoBlock}>
-                    <div className={styles.videoWrapper}>
-                        <div className={styles.btn}>
-                            <img className={styles.triangle} src={triangle} alt="triangle" />
-                        </div>
-                        <div className={styles.videoDescr}>Why a mortgage is so much more 
-                        than just a rate?</div>
-                        <div className={styles.videoDuration}>0:34</div>
-                    </div>
-                    
-                </div>
+                {videoData.map((video, i) => (
+                    <VideoBlock key={i} descr={video.descr} time={video.time}/>
+                ))}  
             </div>
           </div>
-
+          
              <div className={styles.nav}>
                 <div className={styles.circle}></div>
                 <div className={styles.dottedLine}></div>
@@ -78,7 +69,7 @@ const JourneySection = () => {
             </div>
 
         </div>
-        </div>
+      </Container>
 
 		</section>
 		

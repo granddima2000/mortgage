@@ -1,0 +1,18 @@
+@import '../../../../style/variables.scss';
+
+.speaker {
+	// background: url('../../../../resources/person/speaker.png') center center / cover no-repeat;
+	// min-height: 100vh;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+	padding-top: 24px;
+}
+
+.imgSpeaker {
+	margin-top: 16px;
+	img {
+		margin: 0 auto;
+	}
+}

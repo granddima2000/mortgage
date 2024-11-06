@@ -3,11 +3,6 @@
 .teamSection {
 	margin-top: 104px;
 }
-.container {
-	// max-width: 1140px;
-	max-width: 1088px;
-	margin: 0 auto;
-}
 
 .subtitle {
 	composes: subtitle from '../../style/shared.module.scss';
@@ -17,10 +12,10 @@
 .managerCards {
 	margin-top: 65px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	// gap: 64px;
+	gap: 64px;
 }
 
 .managerCard {

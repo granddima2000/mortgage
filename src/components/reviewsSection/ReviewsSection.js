@@ -3,8 +3,8 @@ import shared from '../../style/shared.module.scss';
 
 import google from '../../resources/logo/google.png';
 import zillow from '../../resources/logo/zillow.png';
-import leftBtn from '../../resources/icon/arrowLeft.png';
-import rightBtn from '../../resources/icon/arrowRight.png';
+import leftBtn from '../../resources/icon/arrowLeft.svg';
+import rightBtn from '../../resources/icon/arrowRight.svg';
 import women from '../../resources/person/personCircle1.png';
 import men from '../../resources/person/personCircle2.png'
 import quoteImg from '../../resources/icon/right-quote.png';

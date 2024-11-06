@@ -6,11 +6,6 @@
 	background-color: #126893;
 }
 
-.container {
-	max-width: 1240px;
-	margin: 0 auto;
-}
-
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -24,6 +19,13 @@
 
 .button {
 	composes: button from '../../style/shared.module.scss';
+	&:hover {
+		background-color: darken(#98bfce, 10%)
+	}
+	
+	&:active {
+		background-color: darken(#98bfce, 20%)
+	}
 }
 
 .divider {
@@ -42,14 +44,13 @@
 }
 
 .section {
-	
-}
-
-.underItem {
-	margin-top: 24px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+}
+
+.title {
+	margin-bottom: 8px;
 }
 
 .title {
@@ -66,10 +67,29 @@
 	color: #fff;
 	opacity: 0.7;
 	text-decoration: none;
+	list-style-type: none;
+	transition: all 0.5s;
+	&:hover {
+		opacity: 1;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+	address {
+		font-style: normal;
+	}
+}
+
+.descrWrap {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .descr {
 	width: 499px;
+	// height: 40px;
 	font-weight: 300;
 	font-size: 10px;
 	line-height: 20px;
