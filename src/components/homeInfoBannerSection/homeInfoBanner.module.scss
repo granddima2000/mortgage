@@ -1,0 +1,96 @@
+@import '../../style/variables.scss';
+
+.homeBanner {
+	background: url('../../resources/bg/homeBanner.png') center center / cover no-repeat;
+	padding: 30px 0 30px 0;
+}
+
+// .logo {
+	
+// }
+
+.wrapper {
+    position: relative;
+	margin-top: 220px;
+	display: flex;
+    justify-content: flex-end;
+    gap: 46px;
+}
+
+.otherWrapper {
+    justify-content: center;
+
+}
+
+.bookWrap {
+    // position: absolute;
+    // width: 520px;
+    // height: 732px;
+    // z-index: 2;
+}
+
+.infoWrap {
+	width: 678px;
+	display: flex;
+	gap: 86px;
+}
+
+.infoTextBlock {
+	width: 100%;
+}
+
+.infoText {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 60px;
+	color: #fff;
+}
+
+.authorName {
+	margin-top: 21px;
+	font-size: 16px;
+	line-height: 16px;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.btns {
+	display: flex;
+	gap: 16px;
+	align-items: flex-end;
+}
+
+.btn {
+	border: 1px solid #fff;
+	border-radius: 4px;
+	width: 66px;
+	height: 42px;
+	background: rgba(255, 255, 255, 0.4);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.bookImg {
+	// position: absolute;
+	// top: -270px;
+	// Здесь мои попытки сделать с помощью position: absolute. 
+	// left: 0;
+	// transform: translateY(-150px);
+	// Как можно избежать отрицательных значений?
+    position: absolute;
+	// margin-top: -270px;
+    left: 0;
+	width: 520px;
+    height: 732px;
+	z-index: 2;
+	img {
+		width: 100%;
+		height: 100%;
+		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.35),
+                0px 4px 8px rgba(0, 0, 0, 0.25);
+	}
+}
+

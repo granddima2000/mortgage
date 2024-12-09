@@ -1,0 +1,56 @@
+.aboutAuthor {
+	margin-top: 100px;
+}
+
+.title {
+	composes: title from '../../style/shared.module.scss';
+}
+
+.managerProfile {
+	display: flex;
+	width: 996px;
+	// height: 378px;
+	margin: 0 auto;
+	margin-top: 15.6px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photoProfile {
+	position: relative;
+	z-index: 10;
+	transform: translateX(45px);
+	width: 460px;
+	height: object-fit;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.wrapperProfile {
+	z-index: 9;
+}
+
+.smallText {
+	composes: smallText from '../../style/shared.module.scss';
+	margin-top: 48px;
+}
+
+.name {
+	composes: sectionTitle from '../../style/shared.module.scss';
+	margin-top: 5px;
+}
+
+.divider {
+	composes: divider from '../../style/shared.module.scss';
+	width: 40px;
+	margin-top: 20px;
+}
+
+.descr {
+	composes: descr from '../../style/shared.module.scss';
+	margin: 17.6px 0 20.4px 0;
+	opacity: 0.5;
+	width: 360px;
+}

@@ -1,0 +1,104 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Article #1",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Scott Johnson",
+        "img": "resources/miniManager2.png"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Article #2",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Justin Roberts",
+        "img": "resources/miniManager1.png"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Article #3",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Justin Roberts",
+        "img": "resources/miniManager1.png"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Article #4",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Scott Johnson",
+        "img": "resources/miniManager2.png"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Article #5",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Scott Johnson",
+        "img": "resources/miniManager2.png"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Article #6",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Justin Roberts",
+        "img": "resources/miniManager1.png"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Article #7",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Scott Johnson",
+        "img": "resources/miniManager2.png"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Article #8",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Scott Johnson",
+        "img": "resources/miniManager2.png"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Article #9",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advisingTerms of your offer, how quickly you can turn things around and who your lenders is advising",
+      "author": {
+        "name": "Justin Roberts",
+        "img": "resources/miniManager1.png"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Article #10",
+      "category": "Blog",
+      "descr": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+      "author": {
+        "name": "Scott Johnson",
+        "img": "resources/miniManager2.png"
+      }
+    }
+  ]
+}

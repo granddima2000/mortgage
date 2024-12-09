@@ -1,0 +1,13 @@
+	// 	// У меня шла жесткая борьба с изображением. Надеюсь, что +- справился?
+	.btnWrapper {
+		// position: absolute;
+		// right: 22px;
+		display: flex;
+		align-items: center;
+		z-index: 20;
+		.pulseText {
+			font-weight: 400;
+			font-size: 13px;
+			cursor: pointer;
+		}
+	}

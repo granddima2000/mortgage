@@ -6,8 +6,13 @@
 }
 
 .imageContent {
-  background: url('../../resources/bg/Bitmap.png') center center / cover no-repeat;
-  padding: 572px 208px 29px 102px;
+    background: url('../../resources/bg/Bitmap.png') center center / cover no-repeat;
+    padding: 0 208px 29px 102px;
+    width: 586px;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .wrapper {
@@ -86,23 +91,6 @@
   margin-right: 42px;
 }
 
-.button {
-  composes: button from '../../style/shared.module.scss';
-  margin-right: 24px;
-  gap: 38px;
-}
-
-.secondaryBtn {
-  composes: button from '../../style/shared.module.scss';
-  background-color: #fff;
-  border: 1px solid $indigo-color ;
-  width: 181px;
-  color: $indigo-color;
-  &:hover {
-    color: #fff;
-  }
-}
-
 .hamburger-menu {
   position: fixed;
   left: 24px;
@@ -140,7 +128,18 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+    .imageContent {
+        width: 100%;
+        padding: 0;
+    }
+
+    .wrapper {
+        margin-bottom: 20px;
+    }
+    .mortgageSection {
+        flex-direction: column;
+    }
   // .titleWrapper {
     
   // }

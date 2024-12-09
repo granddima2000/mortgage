@@ -1,5 +1,5 @@
 
-import VideoBlock from '../page/videoBlock/VideoBlock';
+import VideoBlock from '../videoBlock/VideoBlock';
 import Container from '../container/Container';
 import styles from './journeySection.module.scss';
 

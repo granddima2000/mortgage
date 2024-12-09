@@ -1,0 +1,18 @@
+@import '../../../style/variables.scss';
+
+.button {
+  composes: button from '../../../style/shared.module.scss';
+  margin-right: 24px;
+  gap: 38px;
+}
+
+.secondaryBtn {
+  composes: button from '../../../style/shared.module.scss';
+  background-color: #fff;
+  border: 1px solid $indigo-color ;
+  width: 181px;
+  color: $indigo-color;
+  &:hover {
+    color: #fff;
+  }
+}

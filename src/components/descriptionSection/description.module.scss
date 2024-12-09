@@ -1,0 +1,50 @@
+@import '../../style/variables.scss';
+
+.descriptionSection {
+    margin-top: 32px;
+}
+
+.wrapDescr {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    width: 648px;
+    margin: 0 auto;
+    // align-items: center;
+}
+
+.title {
+    composes: title from '../../style/shared.module.scss';
+    text-align: start;
+}
+
+.descr {
+    margin-top: 9px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    opacity: 0.8;
+}
+
+.titleThing {
+    composes: sectionTitle from '../../style/shared.module.scss';
+    margin-top: 48.8px;
+}
+
+.info {
+    composes: descr from '../../style/shared.module.scss';
+    opacity: 0.5;
+    margin-top: 22px;
+    width: 100%;
+}
+
+.img {
+    margin: 0 auto;
+    width: 646px;
+    height: 334px;
+    margin-top: 28.4px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

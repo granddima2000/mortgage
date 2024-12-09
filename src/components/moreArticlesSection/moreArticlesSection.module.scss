@@ -1,0 +1,111 @@
+@import '../../style/variables.scss';
+
+.moreArticles {
+    margin-top: 116px;
+}
+
+.title {
+    composes: title from '../../style/shared.module.scss';
+}
+
+.cardWrapper {
+    margin-top: 35.6px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+	background-color: #fff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 28px 57px 32px 32px;
+	transition: 0.5s all;
+	cursor: pointer;
+	&:hover {
+		background-color: $ocean-color;
+		.category {
+			color: #fff;
+			opacity: 0.5;
+		}
+		.articleTitle {
+			color: #fff;
+		}
+		.descr {
+			color: #fff;
+		}
+		.byLabel {
+			color: #fff;
+		}
+		.authorName {
+			color: #fff;
+		}
+	}
+}
+
+.category {
+	font-weight: 700;
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: $ocean-color;
+}
+
+.articleTitle {
+	composes: sectionTitle from '../../style/shared.module.scss';
+	margin-top: 82px;
+}
+
+.descr {
+	composes: descr from '../../style/shared.module.scss';
+	margin-top: 18px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; // Я нашел в интернете способ сделать обрезание текста так
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.divider {
+	composes: divider from '../../style/shared.module.scss';
+	margin-top: 20px;
+	width: 268px;
+}
+
+.authorInfo {
+	display: flex;
+	margin-top: 23px;
+	gap: 12px;
+}
+
+.authorImg {
+    border-radius: 50%;
+    overflow: hidden;
+	background-color: #f0f0f0;
+}
+
+.authorText {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.byLabel {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	opacity: 0.5;
+}
+
+.authorName {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 100%;
+	color: $indigo-color;
+}
+
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: #000;
+  width: 20px;
+  height: 10px;
+}

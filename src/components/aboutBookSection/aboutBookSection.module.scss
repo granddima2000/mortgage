@@ -1,0 +1,46 @@
+.aboutBook {
+	margin: 29px 0 303px 0;
+}
+
+.positionWrap {
+    padding-right: 159px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 40px;
+}
+
+.wrapText {
+	width: 519px;
+	z-index: 1;
+}
+
+.title {
+	composes: sectionTitle from '../../style/shared.module.scss'; 
+}
+
+.descr {
+	composes: descr from '../../style/shared.module.scss';
+	margin-top: 22px;
+}
+
+.wrapInput {
+	display: flex;
+	margin-top: 32px;
+}
+
+.inputText {
+	border: 1px solid #979797;
+	width: 360px;
+	height: 56px;
+	padding: 16px 0 21px 19px;
+	font-weight: 300;
+	font-size: 16px;
+	color: #000;
+	opacity: 0.5;
+}
+
+.bookBtn {
+	composes: button from '../../style/shared.module.scss';
+	width: 169px;
+	height: 56px;
+}

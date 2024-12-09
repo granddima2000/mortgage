@@ -1,0 +1,95 @@
+@import '../../style/variables.scss';
+
+.webinarName {
+    display: flex;
+    justify-content: space-between;
+    // gap: 261px;
+}
+
+.webinarInfo {
+    padding-left: 100px;
+}
+
+.logo {
+    margin-top: 29px;
+}
+
+.title {
+    composes: title from '../../style/shared.module.scss';
+    text-align: start;
+    margin-top: 103px;
+}
+
+.name {
+    margin-top: 13px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.descr {
+    composes: descr from '../../style/shared.module.scss';
+    margin-top: 30px;
+    width: 478px;
+}
+
+.wrapInput {
+    margin-top: 28.4px;
+    form {
+        display: flex;
+        width: 533px;
+        height: 56px;
+    }
+}
+
+.emailInput {
+    border: 1px solid #979797;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.btn {
+    composes: button from '../../style/shared.module.scss';
+    // border-radius: 4px;
+    width: 183px;
+    height: 56px;
+}
+
+.blueBg {
+    border-radius: 4px;
+    width: 546px;
+    height: 540px;
+    background: linear-gradient(309deg, #126893 0%, #278fb4 100%);
+    padding-right: 100px;
+}
+
+.imgPC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 648px;
+    height: 431px;
+    transform: translate(-202px, 72px);
+    background: url('../../resources/top-macbook.png') center center / cover no-repeat;
+}
+
+.wrap {
+    display: flex;
+}
+
+.pulseBtn {
+    composes: pulseBtn from '../../style/shared.module.scss';
+    margin-right: 0;
+    
+}
+
+@media (max-width: 1365px) {
+    .blueBg {
+        width: 460px;
+    }
+    .imgPC {
+        transform: translate(-170px, 72px);
+    }
+}

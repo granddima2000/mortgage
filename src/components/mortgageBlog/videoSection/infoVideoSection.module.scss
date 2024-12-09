@@ -1,0 +1,11 @@
+.gallery {
+	margin-top: 48px;
+};
+
+.gridGallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 397px));
+	grid-template-rows: repeat(auto-fill, 234px);
+    justify-content: center;
+	gap: 24px;
+};

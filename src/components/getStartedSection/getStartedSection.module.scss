@@ -1,0 +1,32 @@
+
+.getStarted {
+	margin-top: 147px;
+}
+
+.wrapperStarted {
+    display: flex;
+    gap: 64px;
+}
+
+.wrapperBtn {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+    composes: title from '../../style/shared.module.scss';
+    text-align: start;
+}
+
+.descr {
+    composes: descr from '../../style/shared.module.scss';
+    opacity: 0.5;
+    width: 422px;
+    margin-top: 3px;
+}
+
+.divider {
+    composes: divider from '../../style/shared.module.scss';
+    margin-top: 135px;
+}
