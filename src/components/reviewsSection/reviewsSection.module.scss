@@ -129,6 +129,7 @@
 	width: 44px;
 	height: 44px;
 	border-radius: 100%;
+    border: 1px solid white;
 	background-color: #fff;
 	margin-right: 20px;
 	// transform: rotate(180deg);
@@ -162,11 +163,20 @@
 }
 
 
+.visionBlock {
+    position: absolute;
+    // width: 479px;
+    height: 310px;
+    left: 123px;
+    bottom: 84px;
+    border-radius: 5px;
+    box-shadow: 0 16px 18px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
 .cardWrapper {
-	position: absolute;
-	bottom: 84px;
-	left: 123px;
 	display: flex;
+    transition: transform 0.3s ease-in-out;
 	gap: 24px;
 }
 
@@ -265,18 +275,65 @@
   }
 
 
-@media (min-width: 1600px) {
+@media (max-width: 1300px) {
 	.dots {
 		justify-content: center;
 		right: 30%;
 	}
+    .reviews {
+	    position: relative;
+	    margin: 96px 0 0 50px;
+	    overflow: hidden;
+    }
 }
 
 @media (max-width: 1200px) {
 .dots {
-//   left: 80px;
-//   right: 60px;
 	gap: 24px;
 	justify-content: center;
 }
+
+}
+
+@media (max-width: 992px) {
+    .reviews {
+        margin: 96px 0 0 0;
+    }
+    .title {
+        text-align: center;
+    }
+    .subtitle {
+        text-align: center;
+    }
+    .wrapper {
+        margin-top: 120px;
+    }
+    .ratingWrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 629px) {
+    .info {
+        display: none;
+    }
+    .wrapper {
+        margin-top: 160px;
+    }
+}
+
+@media (max-width: 567px) {
+    .btns {
+        display: none;
+    }
+    .dots {
+        right: 25%;
+        gap: 30px;
+    }
+    .slider {
+        height: 258px;
+    }
+    .visionBlock {
+        left: 20px;
+    }
 }

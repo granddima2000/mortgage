@@ -13,7 +13,7 @@ const ReportSection = ({ nameTitle }) => {
             <img src={procent} alt="procent" />
           </div>
           <div className={styles.nameCard}>Rate</div>
-          <span className={styles.divider}></span>
+          <hr className={styles.divider}></hr>
           <div className={styles.descr}>
             Yes. Rate is important, but it’s not everything. Understanding your
             rate is more important.
@@ -24,7 +24,7 @@ const ReportSection = ({ nameTitle }) => {
             <img src={relationship} alt="relationship" />
           </div>
           <div className={styles.nameCard}>Relationship</div>
-          <span className={styles.divider}></span>
+          <hr className={styles.divider}></hr>
           <div className={styles.descr}>
             Build a solid relationship with a realtor a lender and never look
             back!
@@ -35,7 +35,7 @@ const ReportSection = ({ nameTitle }) => {
             <img src={preApproved} alt="preApproved" />
           </div>
           <div className={styles.nameCard}>Pre-Approved</div>
-          <span className={styles.divider}></span>
+          <hr className={styles.divider}></hr>
           <div className={styles.descr}>
             Getting pre-approved early will play a key part in finding your
             dream home.

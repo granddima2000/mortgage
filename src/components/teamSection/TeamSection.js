@@ -16,7 +16,7 @@ import PulseBtn from "../buttons/pulseBtn/PulseBtn";
 const TeamSection = () => {
   return (
     <section className={styles.teamSection}>
-      <h2 className={shared.title}>
+      <h2 className={styles.title}>
         Getting a mortgage funded takes a village.
       </h2>
       <h3 className={styles.subtitle}>
@@ -33,13 +33,13 @@ const TeamSection = () => {
           <div className={styles.underWrapper}>
             <div className={styles.managerTitle}>The master mind</div>
             <div className={styles.managerName}>Justin</div>
-            <span className={styles.divider}></span>
+            <hr className={styles.divider}></hr>
             <div className={styles.managerDescr}>
               Rates change, but every mortgage journey starts with <br />a
               relationship. (Pssst...it’s not just about clicking a button)
             </div>
             <div className={styles.skillsName}>Skills</div>
-            <span className={shared.divider}></span>
+            <hr className={shared.divider}></hr>
             <div className={styles.skillsWrapper}>
               <div className={styles.skillsItem}>
                 <div className={styles.skillsImg}>
@@ -78,13 +78,13 @@ const TeamSection = () => {
           <div className={styles.underWrapper}>
             <div className={styles.managerTitle}>The educator</div>
             <h3 className={styles.managerName}>Scott</h3>
-            <span className={styles.divider}></span>
+            <hr className={styles.divider}></hr>
             <div className={styles.managerDescr}>
               Rates change, but every mortgage journey starts with <br />a
               relationship. (Pssst...it’s not just about clicking a button)
             </div>
             <div className={styles.skillsName}>Skills</div>
-            <span className={shared.divider}></span>
+            <hr className={shared.divider}></hr>
             <div className={styles.skillsWrapper}>
               <div className={styles.skillsItem}>
                 <div className={styles.skillsImg}>

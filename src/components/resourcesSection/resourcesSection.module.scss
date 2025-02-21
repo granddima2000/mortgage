@@ -1,5 +1,10 @@
 @import '../../style/variables.scss';
 
+.resourcesWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .title {
 	composes: title from '../../style/shared.module.scss';
@@ -10,14 +15,28 @@
 .cards {
 	margin-top: 20px;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 397px));
+    grid-template-columns: repeat(auto-fill, 397px);
     grid-template-rows: repeat(auto-fill, minmax(266px, auto));
     grid-auto-columns: minmax(150px, 397px);
     grid-auto-rows: minmax(266px, auto);
 	gap: 20px;
+    place-content: center;
 }
 
 .resourceSectionMargin {
 	margin-top: 92px;
+}
+
+@media (max-width: 1300px) {
+    .title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 630px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 397px));
+        grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+    }
 }
 

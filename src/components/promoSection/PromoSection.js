@@ -42,13 +42,15 @@ const PromoSection = () => {
             Let us help you create <br />
             your mortgage journey
           </div>
-          <GetStartedButtons />
+          <div className={styles.btnsWrap}>
+            <GetStartedButtons />
+          </div>
         </div>
       </div>
-      <div class={styles["hamburger-menu"]}>
-        <div class={styles.line}></div>
-        <div class={styles.line}></div>
-        <div class={styles.line}></div>
+      <div className={styles["hamburger-menu"]}>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
       </div>
     </section>
   );

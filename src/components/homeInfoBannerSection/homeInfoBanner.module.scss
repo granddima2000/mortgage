@@ -22,13 +22,6 @@
 
 }
 
-.bookWrap {
-    // position: absolute;
-    // width: 520px;
-    // height: 732px;
-    // z-index: 2;
-}
-
 .infoWrap {
 	width: 678px;
 	display: flex;
@@ -94,3 +87,49 @@
 	}
 }
 
+@media (max-width: 1300px) {
+    .infoWrap {
+        max-width: 678px;
+    }
+    .bookImg {
+        width: 420px;
+        height: 582px;
+        left: -80px;
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+    .infoText {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1249px) {
+    .bookImg {
+        display: none;
+    }
+    .wrapper {
+        justify-content: center;
+    }
+
+    .logo {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 630px) {
+    .infoWrap {
+        gap: 30px;
+    }
+    .infoText {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 472px) {
+    .infoWrap {
+        flex-direction: column;
+    }
+}

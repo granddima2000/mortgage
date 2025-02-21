@@ -4,6 +4,7 @@
 	margin-top: 96px;
 	padding: 20px 0 35px 0;
 	background-color: #126893;
+    
 }
 
 .header {
@@ -16,9 +17,9 @@
 
 }
 
-
 .button {
 	composes: button from '../../style/shared.module.scss';
+
 	&:hover {
 		background-color: darken(#98bfce, 10%)
 	}
@@ -34,6 +35,7 @@
 }
 
 .wrap {
+    position: relative;
 	margin-top: 31px;
 	// Как лучше footer делать? Через grid или flex ? 
 	display: flex;
@@ -46,18 +48,28 @@
 .section {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 24.6px;
+    
 }
 
 .title {
-	margin-bottom: 8px;
-}
-
-.title {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 8px;	
 	font-weight: 700;
 	font-size: 15px;
 	line-height: 18px;
-	color: #fff;	
+	color: #fff;
+    
+}
+
+.wrapperList {
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.3s ease-in-out;
+    gap: 16px;
+    padding: 0;
+    opacity: 1;
 }
 
 .entry {
@@ -104,4 +116,118 @@
 	line-height: 24px;
 	text-align: center;
 	color: #fff;
+}
+
+@media (max-width: 1300px) {
+    .descrWrap {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1199px) {
+    .descrWrap {
+        display: none;
+    }
+    .wrap {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 630px) {
+    .header {
+        gap: 10px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+    .descrWrap {
+        display: none;
+    }
+    .section {
+        gap: 15px;
+    }
+    .wrap {
+        gap: 10px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        
+    }
+    .section:nth-child(4) {
+        display: none;
+    }
+
+    .title {
+        max-width: 80px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .wrapperList {
+        max-height: 0;
+        // overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .wrapperList.active {
+        max-height: 500px;
+        opacity: 1;
+    }
+    .entry {
+        max-width: 160px;
+        font-size: 12px;
+    }
+    .title {
+        &::before {
+            content: "+";
+            position: absolute;
+            left: -20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    .section.active .title::before {
+    content: "-";
+    }
+
+}
+
+@media (max-width: 425px) {
+    .wrap {
+        flex-direction: column;
+        padding-left: 15px;
+        gap: 20px;
+    }
+    .section {
+        display: block;
+    }
+    .wrapperList {
+        position: absolute;
+        left: 32%;
+        top: 0;
+	    opacity: 0;
+        transform: scaleX(1);
+        transform-origin: left;
+        max-width: 250px;
+    }
+    .wrapperList.active {
+        opacity: 1;
+    }
+    
+    .title {
+        text-align: start;
+        max-width: 80px;
+        margin: 0;
+    }
+    .entry {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .wrapperList {
+        left: 40%;
+    }
+    .footer {
+        margin-top: 30px;
+    }
 }

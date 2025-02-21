@@ -1,5 +1,4 @@
-	// 	// У меня шла жесткая борьба с изображением. Надеюсь, что +- справился?
-	.btnWrapper {
+    .btnWrapper {
 		// position: absolute;
 		// right: 22px;
 		display: flex;
@@ -11,3 +10,7 @@
 			cursor: pointer;
 		}
 	}
+
+@media (max-width: 440px) {
+  
+}

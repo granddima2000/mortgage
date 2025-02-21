@@ -4,11 +4,14 @@
 	margin-top: 104px;
 }
 
+.title {
+    composes: title from '../../style/shared.module.scss';
+}
+
 .subtitle {
 	composes: subtitle from '../../style/shared.module.scss';
 }
-// И вместо этой комбинации оставить лишь padding у обертки карточек. У самих карточек убрать отступы, да и верхний padding можно
-// - Я решил сделать так: 
+
 .managerCards {
 	margin-top: 65px;
 	display: flex;
@@ -132,15 +135,53 @@
 	}
 
 
-@media(max-width: 1399px) {
-	.managerCards {
-		// flex-wrap: wrap;
-	}
-	
-}
-
 @media(max-width: 1199px) {
 	.managerCards {
 		flex-direction: column;
 	}
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 630px) {
+    .managerWrapper {
+        gap: 50px;
+    }
+    .managerCard {
+        width: auto;
+    }
+    .photo {
+        width: 250px;
+    }
+
+
+}
+
+@media (max-width: 440px) {
+    .managerCard {
+        width: 300px;
+    }
+    .managerWrapper {
+        gap: 0;
+        height: 160px;
+    }
+    .photo {
+        padding-left: 15px;
+        img {
+            bottom: 0;
+            
+        }
+    }
+    .skillsImg {
+        width: 38px;
+        height: 38px;
+        img {
+            width: 17px;
+            height: 17px;
+        }
+    }
 }

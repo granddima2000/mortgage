@@ -17,7 +17,10 @@
 }
 
 .reportsBlock {
-	width: 276px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
@@ -51,7 +54,12 @@
 	composes: descr from '../../style/shared.module.scss';
 	text-align: center;
 	margin-top: 19.5px;
-	// width: 260px;
+	max-width: 276px;
 	opacity: 0.5;
-	// Я хочу избежать жестких значений, но без них у меня не получается делать так как по макету :(
+}
+
+@media (max-width: 993px) {
+    .wrapper {
+        flex-direction: column;
+    }
 }

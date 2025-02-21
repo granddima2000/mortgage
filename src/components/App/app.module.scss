@@ -11,3 +11,15 @@
 	display: flex;
 	gap: 24px;
 }
+
+@media (max-width: 1299px) {
+    .educationWrapper {
+        justify-content: center;
+        gap: 50px;
+    }
+}
+@media (max-width: 960px) {
+    .educationWrapper {
+        flex-direction: column;
+    }
+}

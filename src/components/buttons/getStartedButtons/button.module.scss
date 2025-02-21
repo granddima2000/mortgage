@@ -16,3 +16,14 @@
     color: #fff;
   }
 }
+
+@media (max-width: 425px) {
+    .button {
+        margin-right: 12px;
+        gap: 30px;
+
+    }
+    .secondaryBtn {
+        width: 120px;
+    }
+}

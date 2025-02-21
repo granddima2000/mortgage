@@ -15,7 +15,7 @@ const GetStartedSection = () => {
               Rates change, but every mortgage journey starts with a
               relationship. (Pssst...it’s not just about clicking a button)
             </div>
-            <span className={styles.divider}></span>
+            <hr className={styles.divider}></hr>
             <div className={styles.wrapperBtn}>
               <GetStartedButtons />
             </div>

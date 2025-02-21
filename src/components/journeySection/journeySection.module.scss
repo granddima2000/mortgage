@@ -12,7 +12,6 @@
 
 .subtitle {
 	composes: subtitle from '../../style/shared.module.scss';
-	// Я не понимаю, нужен ли тут отступ? На макете вижу, но в моей верстке слишком огромный оступ.
 	// margin-top: 21px;
 	text-align: start;
 }
@@ -72,7 +71,6 @@
 
 .stepNumber {
 	composes: smallText from '../../style/shared.module.scss';
-	
 }
 
 
@@ -86,27 +84,27 @@
 
 
 .rightWrapper {
-	width: 796px;
+	// width: 796px;
 }
   
 .gridContainer {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, minmax(200px, 386px));
 	grid-template-rows: 436px 234px;
 	gap: 24px;
+    transition: transform 0.3s ease-in-out;
 	
 }
-
 .gridContainer > :first-child {
-	grid-column: 1 / span 2; /* Первый элемент занимает две колонки */
-  }
+  grid-column: 1 / span 2; 
+  min-height: 436px; 
+  transition: all 0.4s ease-in-out;
+}
 
-// .gridContainer:first-child {
-// 		grid-column: 1 / span 2;
-// 	}
-// .videoBlock:first-child {
-// 	grid-column: 1 / span 2;
-// }
+.gridContainer > :not(:first-child) {
+  min-height: 234px;
+  transition: all 0.4s ease-in-out;
+}
 
 .nav {
 display: flex;
@@ -131,14 +129,14 @@ cursor: pointer;
 width: 16px;
 height: 16px;
 border-radius: 50%;
-background-color: #00a5d6; /* Синий цвет для заполненного круга */
-border: 2px solid #a5e2f5; /* Голубой ободок */
+background-color: #00a5d6; 
+border: 2px solid #a5e2f5; 
 margin: 4px 0;
 }
 
 .circleFilled.active {
-box-shadow: 0 0 0 8px rgba(0, 165, 214, 0.2); /* Появляется только при активном состоянии */
-transform: scale(1.2); /* Увеличиваем размер при активации, чтобы привлечь внимание */
+box-shadow: 0 0 0 8px rgba(0, 165, 214, 0.2); 
+// transform: scale(1.2);
 }
 
 .dottedLine {
@@ -153,13 +151,41 @@ background: repeating-linear-gradient(
 );
 }
 
+@media (max-width: 1200px) { 
+    .nav {
+        display: none;
+    }
+}
 
-// @media (max-width: 1128px) {
-// 	.gridContainer {
-// 		grid-template-rows: repeat(3, 210px);
-// 		grid-template-columns: repeat(1, 1fr);
-// 		.videoBlock:first-child {
-// 			grid-column: auto;
-// 		}
-// 	}
-// }
+@media (max-width: 992px) { 
+    .content {
+        place-content: center;
+        gap: 0;
+    }
+    .leftWrapper {
+        display: none;
+    }
+    .title {
+        text-align: center;
+    }
+    .subtitle {
+        text-align: center;
+    }
+}
+
+@media (max-width: 630px) {
+    .gridContainer > :first-child {
+    grid-column: 1; 
+    min-height: auto;
+    transition: all 0.4s ease-in-out;
+}
+    .content {
+        display: block;
+    }
+	.gridContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 300px); 
+    grid-template-columns: 1fr; 
+    gap: 24px; 
+}
+}

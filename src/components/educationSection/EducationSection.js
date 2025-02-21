@@ -30,21 +30,23 @@ const EducationSection = ({ className }) => {
   return (
     <section className={styles[className ? className : null]}>
       <Container>
-        <div className={styles.headerWithLink}>
-          <h2 className={styles.title}>Education</h2>
-          {className ? null : (
-            <a href="#" className={styles.underlineLink}>
-              All articles
-            </a>
-          )}
-        </div>
-        <div className={styles.wrapper}>
-          {
-            <CardItemsSection
-              articlesData={articlesData}
-              itemsToShow={itemsToShow}
-            />
-          }
+        <div className={styles.contentWrapper}>
+          <div className={styles.headerWithLink}>
+            <h2 className={styles.title}>Education</h2>
+            {className ? null : (
+              <a href="#" className={styles.underlineLink}>
+                All articles
+              </a>
+            )}
+          </div>
+          <div className={styles.wrapper}>
+            {
+              <CardItemsSection
+                articlesData={articlesData}
+                itemsToShow={itemsToShow}
+              />
+            }
+          </div>
         </div>
       </Container>
     </section>

@@ -8,4 +8,11 @@
 	grid-template-rows: repeat(auto-fill, 234px);
     justify-content: center;
 	gap: 24px;
+    
 };
+
+@media (max-width: 992px) {
+    .gridGallery > *:nth-child(n+4) {
+        display: none;
+    }
+  }

@@ -1,0 +1,30 @@
+.education {
+	margin-top: 130px;
+}
+
+// .container {
+// 	max-width: 1240px;
+// 	margin: 0 auto;
+// }
+
+.educationWrapper {
+	display: flex;
+	gap: 24px;
+}
+
+@media (max-width: 1300px) {
+    .educationWrapper {
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .contentWrapper {
+        max-width: 818px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 960px) {
+    .educationWrapper {
+        flex-direction: column;
+    }
+}

@@ -3,7 +3,6 @@
 .webinarName {
     display: flex;
     justify-content: space-between;
-    // gap: 261px;
 }
 
 .webinarInfo {
@@ -30,7 +29,7 @@
 .descr {
     composes: descr from '../../style/shared.module.scss';
     margin-top: 30px;
-    width: 478px;
+    max-width: 478px;
 }
 
 .wrapInput {
@@ -52,26 +51,27 @@
 
 .btn {
     composes: button from '../../style/shared.module.scss';
-    // border-radius: 4px;
     width: 183px;
     height: 56px;
 }
 
 .blueBg {
+    position: relative;
     border-radius: 4px;
     width: 546px;
     height: 540px;
     background: linear-gradient(309deg, #126893 0%, #278fb4 100%);
-    padding-right: 100px;
 }
 
 .imgPC {
+    position: absolute;
+    top: 52px;
+    left: -202px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 648px;
     height: 431px;
-    transform: translate(-202px, 72px);
     background: url('../../resources/top-macbook.png') center center / cover no-repeat;
 }
 
@@ -85,11 +85,47 @@
     
 }
 
-@media (max-width: 1365px) {
-    .blueBg {
-        width: 460px;
+
+
+@media (max-width: 1370px) {
+    .webinarName {
+        gap: 80px;
     }
     .imgPC {
-        transform: translate(-170px, 72px);
+        left: -133px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .imgPC {
+        top: 84px;
+        left: -80px;
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .webinarName {
+        justify-content: center;
+        align-items: center;
+    }
+    .webinarInfo {
+        padding-left: 0;
+    }
+    .blueBg {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .webinarName {
+        padding: 0 20px;
+    }
+    .wrapInput {
+        form {
+            max-width: 533px;
+            width: auto;
+        }
     }
 }

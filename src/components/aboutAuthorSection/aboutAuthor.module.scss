@@ -8,23 +8,25 @@
 
 .managerProfile {
 	display: flex;
-	width: 996px;
+	max-width: 996px;
 	// height: 378px;
 	margin: 0 auto;
 	margin-top: 15.6px;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .photoProfile {
 	position: relative;
-	z-index: 10;
+	z-index: 5;
 	transform: translateX(45px);
-	width: 460px;
-	height: object-fit;
+	width: 485px;
+    height: 340px;
 	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+		position: absolute;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
 	}
 }
 
@@ -52,5 +54,40 @@
 	composes: descr from '../../style/shared.module.scss';
 	margin: 17.6px 0 20.4px 0;
 	opacity: 0.5;
-	width: 360px;
+	max-width: 360px;
+}
+
+@media (max-width: 992px) {
+    .managerProfile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 530px;
+        padding: 5px 30px 30px;
+    }
+    .smallText {
+        margin-top: 30px;
+    }
+    .photoProfile {
+        max-width: 485px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .photoProfile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(0);
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+        img {
+            position: inherit;
+        }
+    }   
+    .smallText {
+        margin-top: 20px;
+    }
 }

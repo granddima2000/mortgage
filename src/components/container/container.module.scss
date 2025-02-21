@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
@@ -8,8 +9,21 @@
     max-width: 648px;
 }
 
-@media (max-width: 1299px) {
+@media (max-width: 1300px) {
     .container {
-        max-width: 1119px;
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 630px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
     }
 }

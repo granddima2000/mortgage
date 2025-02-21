@@ -22,11 +22,13 @@ const ResourceSection = ({ className, src }) => {
   return (
     <section className={styles[className ? className : ""]}>
       <Container>
-        <h2 className={styles.title}>Resources</h2>
-        <div className={styles.cards}>
-          {resources.map((item, i) => (
-            <CardBook key={i} title={item.title} img={item.image} />
-          ))}
+        <div className={styles.resourcesWrap}>
+          <h2 className={styles.title}>Resources</h2>
+          <div className={styles.cards}>
+            {resources.map((item, i) => (
+              <CardBook key={i} title={item.title} img={item.image} />
+            ))}
+          </div>
         </div>
       </Container>
     </section>

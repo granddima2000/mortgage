@@ -5,7 +5,13 @@
 
 .wrapperStarted {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 64px;
+}
+
+.leftContent {
+    max-width: 690px;
 }
 
 .wrapperBtn {
@@ -29,4 +35,33 @@
 .divider {
     composes: divider from '../../style/shared.module.scss';
     margin-top: 135px;
+}
+
+.catImg {
+    max-width: 690px;
+    max-height: 402px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapperStarted {
+        gap: 30px;
+    }
+    
+}
+
+@media (max-width: 1099px) {
+    .wrapperStarted {
+        flex-direction: column;
+    }
+    .descr {
+    width: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    
 }

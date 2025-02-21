@@ -8,7 +8,8 @@
       "author": {
         "name": "Scott Johnson",
         "img": "resources/miniManager2.png"
-      }
+      },
+      "isLarge": true
     },
     {
       "id": 2,
@@ -18,7 +19,9 @@
       "author": {
         "name": "Justin Roberts",
         "img": "resources/miniManager1.png"
-      }
+      },
+      "isLarge": false
+      
     },
     {
       "id": 3,
@@ -28,7 +31,8 @@
       "author": {
         "name": "Justin Roberts",
         "img": "resources/miniManager1.png"
-      }
+      },
+      "isLarge": false
     },
     {
       "id": 4,
@@ -38,7 +42,8 @@
       "author": {
         "name": "Scott Johnson",
         "img": "resources/miniManager2.png"
-      }
+      },
+      "isLarge": false
     },
     {
       "id": 5,
@@ -48,7 +53,8 @@
       "author": {
         "name": "Scott Johnson",
         "img": "resources/miniManager2.png"
-      }
+      },
+      "isLarge": false
     },
     {
       "id": 6,
@@ -58,7 +64,8 @@
       "author": {
         "name": "Justin Roberts",
         "img": "resources/miniManager1.png"
-      }
+      },
+      "isLarge": false
     },
     {
       "id": 7,
@@ -68,7 +75,8 @@
       "author": {
         "name": "Scott Johnson",
         "img": "resources/miniManager2.png"
-      }
+      },
+      "isLarge": true
     },
     {
       "id": 8,
@@ -78,7 +86,9 @@
       "author": {
         "name": "Scott Johnson",
         "img": "resources/miniManager2.png"
-      }
+      },
+      "isLarge": false
+      
     },
     {
       "id": 9,
@@ -88,7 +98,8 @@
       "author": {
         "name": "Justin Roberts",
         "img": "resources/miniManager1.png"
-      }
+      },
+      "isLarge": false
     },
     {
       "id": 10,
@@ -98,7 +109,69 @@
       "author": {
         "name": "Scott Johnson",
         "img": "resources/miniManager2.png"
-      }
+      },
+      "isLarge": false
     }
+  ],
+  "profiles": [
+    {
+        "id": 1,
+        "role": "author",
+        "title": "About author",
+        "name": "Justin",
+        "position": "The Master Mind",
+        "description": "Rates change but every mortgage journey starts with a relationship. (Pssst...it's not just about clicking a button)",
+        "buttonText": "Meet Justin",
+        "imageUrl": "resources/manager1.png"
+    },
+    {
+        "id": 2,
+        "role": "speaker",
+        "title": "About speaker",
+        "name": "Scott",
+        "position": "The Educator",
+        "description": "Rates change, but every mortgage journey starts with a relationship. (Pssst...it's not just about clicking a button)",
+        "buttonText": "Meet Scott",
+        "imageUrl": "resources/manager2.png"
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "image": "resources/person/personCircle1.png",
+      "location": "New York",
+      "name": "Emily Pearson",
+      "role": "Engineer",
+      "quote": "Terms of your offer, how quickly you can turn things around and who your lenders is. Advising, calling listing agents, to get your deal done, Offer-Stage advising, calling listing agents, to get your deal done.",
+      "icon": "resources/logo/googleIcon.png"
+    },
+    {
+      "id": 2,
+      "image": "resources/person/personCircle2.png",
+      "location": "Los Angeles",
+      "name": "Michael Bronson",
+      "role": "Product Designer",
+      "quote": "Terms of your offer, how quickly you can turn things around and who your lenders is. Advising, calling listing agents, to get your deal done, Offer-Stage advising, calling listing agents, to get your deal done.",
+      "icon": "resources/logo/zi.png"
+    },
+    {
+      "id": 3,
+      "image": "resources/person/personCircle1.png",
+      "location": "New York",
+      "name": "Emily Pearson",
+      "role": "Engineer",
+      "quote": "Terms of your offer, how quickly you can turn things around and who your lenders is. Advising, calling listing agents, to get your deal done, Offer-Stage advising, calling listing agents, to get your deal done.",
+      "icon": "resources/logo/googleIcon.png"
+    },
+    {
+      "id": 4,
+      "image": "resources/person/personCircle2.png",
+      "location": "Los Angeles",
+      "name": "Michael Bronson",
+      "role": "Product Designer",
+      "quote": "Terms of your offer, how quickly you can turn things around and who your lenders is. Advising, calling listing agents, to get your deal done, Offer-Stage advising, calling listing agents, to get your deal done.",
+      "icon": "resources/logo/zi.png"
+    }
+
   ]
 }

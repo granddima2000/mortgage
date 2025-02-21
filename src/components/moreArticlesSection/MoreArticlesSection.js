@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import styles from "./moreArticlesSection.module.scss";
 
 const MoreArticlesSection = () => {
@@ -34,16 +35,21 @@ const MoreArticlesSection = () => {
       <Container>
         <h2 className={styles.title}>More articles</h2>
         <div className={styles.cardWrapper}>
-          {/* <CardItemsSection articlesData={articlesData} itemsToShow={3} /> Я хотел реализовать здесь такой подход, но уперся в то, что не могу поменять &:nth-child(1)*/}
           <Swiper
+            // У меня не получается сделать brakepoints. Они работают очень хаотично и нелогично...
+            // navigation={true}
+            // observer={true}
+            // observeParents={true}
             modules={[Navigation]}
-            navigation
-            slidesPerView={3}
+            // slidesPerView={3}
             spaceBetween={20}
-            slidesPerGroup={1}
-            loop={true}
-            lazy={{
-              loadPrevNext: true,
+            // slidesPerGroup={1}
+            // lazy={true}
+            // loop={true}
+            breakpoints={{
+              1024: { slidesPerView: 3 },
+              992: { slidesPerView: 2 },
+              425: { slidesPerView: 1 },
             }}
           >
             {articlesData.map(({ id, category, title, descr, author }) => (
@@ -54,7 +60,7 @@ const MoreArticlesSection = () => {
                   <p className={styles.descr}>
                     {descr.length > 93 ? descr.slice(0, 92) + "..." : descr}
                   </p>
-                  <span className={styles.divider}></span>
+                  <hr className={styles.divider}></hr>
                   <div className={styles.authorInfo}>
                     <div className={styles.authorImg}>
                       <img

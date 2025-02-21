@@ -1,18 +1,23 @@
 import styles from "./cardItemsSection.module.scss";
 
+import classNames from "classnames";
+
 const CardItemsSection = ({ articlesData = [], itemsToShow = 0 }) => {
   return (
     <>
       {articlesData
         .slice(0, itemsToShow)
-        .map(({ id, title, category, descr, author }) => (
-          <div key={id} className={styles.item}>
+        .map(({ id, title, category, descr, author, isLarge }) => (
+          <div
+            key={id}
+            className={classNames(styles.item, { [styles.large]: isLarge })}
+          >
             <div className={styles.category}>{category}</div>
             <h3 className={styles.articleTitle}>{title}</h3>
             <p className={styles.descr}>
               {descr.length > 93 ? descr.slice(0, 92) + "..." : descr}
             </p>
-            <span className={styles.divider}></span>
+            <hr className={styles.divider}></hr>
             <div className={styles.authorInfo}>
               <div className={styles.authorImg}>
                 <img src={require(`../../${author.img}`)} alt="author" />
